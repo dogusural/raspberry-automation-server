@@ -2,14 +2,63 @@ body {
 	background: rgb(1, 1, 22);
 	color: rgb(255, 255, 255);
 }
-.button {
-  font: bold 15px Arial;
+.buttonred {
+  font: bold 12px Arial;
   text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
+  background-color: #ec0c0c;
+  color: #000000;
   padding: 2px 6px 2px 6px;
+  border-radius: 12px;
   border-top: 1px solid #CCCCCC;
   border-right: 1px solid #333333;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
+  transition-duration: 0.4s;
+
+}
+
+.buttonred:hover {
+  background-color: #fffdfd; /* Green */
+  color: red;
+}
+
+
+.buttonyellow {
+  font: bold 12px Arial;
+  text-decoration: none;
+  background-color: #e2f104;
+  color: #000000;
+  padding: 2px 6px 2px 6px;
+  border-radius: 12px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  transition-duration: 0.4s;
+
+}
+
+.buttonyellow:hover {
+  background-color: #fffdfd; /* Green */
+  color: yellow;
+}
+
+.buttongreen {
+  font: bold 12px Arial;
+  text-decoration: none;
+  background-color: #0de918;
+  color: #000000;
+  padding: 2px 6px 2px 6px;
+  border-radius: 12px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  transition-duration: 0.4s;
+
+}
+
+.buttongreen:hover {
+  background-color: #fffdfd; /* Green */
+  color: green;
 }
