@@ -26,6 +26,13 @@ GPIO.output(ledYlw, GPIO.LOW)
 GPIO.output(ledGrn, GPIO.LOW)
 
 app = Flask(__name__)
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    # returns a 200 (not a 404) with the following contents:
+    return render_template('error.html')
+
 @app.route("/")
 def hello():
    now = datetime.datetime.now()
