@@ -64,5 +64,17 @@ def action(deviceName, action):
                'green'  : ledGrnSts,
    }
    return render_template('action.html', **templateData)
+@app.route("/control")
+def control():
+   ledRedSts = GPIO.input(ledRed)
+   ledYlwSts = GPIO.input(ledYlw)
+   ledGrnSts = GPIO.input(ledGrn)
+
+   templateData = {
+               'red'  : ledRedSts,
+               'yellow'  : ledYlwSts,
+               'green'  : ledGrnSts,
+   }
+   return render_template('action.html', **templateData)
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)
