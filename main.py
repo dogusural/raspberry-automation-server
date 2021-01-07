@@ -3,7 +3,7 @@ Code created by Matt Richardson
 for details, visit:  http://mattrichardson.com/Raspberry-Pi-Flask/inde...
 '''
 import RPi.GPIO as GPIO
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import datetime
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
@@ -68,7 +68,8 @@ def action(deviceName, action):
                'yellow'  : ledYlwSts,
                'green'  : ledGrnSts,
    }
-   return render_template('action.html', **templateData)
+   return redirect('control')
+
 @app.route("/control")
 def control():
    ledRedSts = GPIO.input(ledRed)
