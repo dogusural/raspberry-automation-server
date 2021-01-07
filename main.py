@@ -51,15 +51,13 @@ def action(deviceName, action):
    elif deviceName == 'green':
       actuator = ledGrn
    else:
-      templateData = {}
-      return render_template('error.html', **templateData)
+      return render_template('error.html')
    if action == "on":
       GPIO.output(actuator, GPIO.HIGH)
    elif action == "off":
       GPIO.output(actuator, GPIO.LOW)
    else:
-      templateData = {}
-      return render_template('error.html', **templateData)
+      return render_template('error.html')
 
    ledRedSts = GPIO.input(ledRed)
    ledYlwSts = GPIO.input(ledYlw)
