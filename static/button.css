@@ -1,6 +1,18 @@
+/* body {
+	margin: 0;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: black;
+} */
 body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
 	background: rgb(1, 1, 22);
-	color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
 }
 .buttonred {
   font: bold 12px Arial;

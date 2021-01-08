@@ -5,6 +5,7 @@ for details, visit:  http://mattrichardson.com/Raspberry-Pi-Flask/inde...
 import RPi.GPIO as GPIO
 from flask import Flask, render_template, request, redirect
 import datetime
+import monitor
 
 def readGpioInput(pinNumber):
    status = GPIO.input(pinNumber)
@@ -43,7 +44,7 @@ def hello():
    now = datetime.datetime.now()
    timeString = now.strftime("%Y-%m-%d %H:%M")
    templateData = {
-      'title' : 'selam cnm!',
+      'title' : 'Home',
       'time': timeString
       }
    return render_template('index.html', **templateData)
@@ -86,6 +87,23 @@ def control():
                'green'  : ledGrnSts,
    }
    return render_template('action.html', **templateData)
+
+
+@app.route('/monitor')
+def index():
+	return render_template('monitor.html', 
+                           fahrenheit=monitor.getFahrenheit(),
+                           celsius=monitor.getCelsius(),
+                           diskUsageHeader=monitor.getDiskUsage(0), # array for Disk Usage <th>
+                           diskUsageInfo=monitor.getDiskUsage(1), # array for Disk Usage <td>
+                           upTime=monitor.getUptime(), # how long the raspberry pi has been running
+                           memoryUsageHeader=monitor.getMemoryUsage(0), # array for Memory Usage <th>
+                           memoryUsageInfo=monitor.getMemoryUsage(1), # array for Memory Usage <td>
+                           memoryUsePercentage=round(float(monitor.getMemoryUsage(1)[2]) / float(monitor.getMemoryUsage(1)[1]), 4) * 100, # percentage of used Memory
+                           ipAddress=monitor.getIpAddress()[0],
+                           processInfo=monitor.getProcessInfo()
+                          )
+
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)
 
