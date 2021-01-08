@@ -5,6 +5,11 @@ for details, visit:  http://mattrichardson.com/Raspberry-Pi-Flask/inde...
 import RPi.GPIO as GPIO
 from flask import Flask, render_template, request, redirect
 import datetime
+
+def readGpioInput(pinNumber):
+   status = GPIO.input(pinNumber)
+   return ("ON" if status == 1 else "OFF") 
+
 app = Flask(__name__)
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -59,10 +64,9 @@ def action(deviceName, action):
    else:
       return render_template('error.html')
 
-   ledRedSts = GPIO.input(ledRed)
-   ledYlwSts = GPIO.input(ledYlw)
-   ledGrnSts = GPIO.input(ledGrn)
-   
+   ledRedSts = readGpioInput(ledRed)
+   ledYlwSts = readGpioInput(ledYlw)
+   ledGrnSts = readGpioInput(ledGrn)
    templateData = {
                'red'  : ledRedSts,
                'yellow'  : ledYlwSts,
@@ -72,9 +76,9 @@ def action(deviceName, action):
 
 @app.route("/control")
 def control():
-   ledRedSts = GPIO.input(ledRed)
-   ledYlwSts = GPIO.input(ledYlw)
-   ledGrnSts = GPIO.input(ledGrn)
+   ledRedSts = readGpioInput(ledRed)
+   ledYlwSts = readGpioInput(ledYlw)
+   ledGrnSts = readGpioInput(ledGrn)
 
    templateData = {
                'red'  : ledRedSts,
@@ -84,3 +88,7 @@ def control():
    return render_template('action.html', **templateData)
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)
+
+def readGpioInput(pinNumber):
+   status = GPIO.input(pinNumber)
+   return ("ON" if 1 else "OFF") 
