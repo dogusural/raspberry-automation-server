@@ -53,7 +53,7 @@
                         <h2 class="center goldenrod">Temperature</h2>
                         <div class="center">  
                             <!-- Dropdown Trigger -->
-                            <h5 class="center">{{ celsius }}&deg; C</h5>
+                            <h5 class="center goldenrod">{{ celsius }}&deg; C</h5>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <h2 class="center goldenrod">Disk Usage</h2>
                         <table>
                             <thead>
-                                <tr>
+                                <tr class="goldenrod">
                                     <th data-field="filesystem">{{ diskUsageHeader[0] }}</th>
                                     <th data-field="size">{{ diskUsageHeader[1] }}</th>
                                     <th data-field="used">{{ diskUsageHeader[2] }}</th>
@@ -73,7 +73,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="goldenrod">
                                     <td>{{ diskUsageInfo[0] }}</td>
                                     <td>{{ diskUsageInfo[1] }}</td>
                                     <td>{{ diskUsageInfo[2] }}</td>
@@ -89,7 +89,7 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <h2 class="center goldenrod">Uptime</h2>
-                        <h5 class="center">{{ upTime[0] }} Days<br>{{ upTime[1] }} Hours<br>{{ upTime[2] }} Minutes</h5>
+                        <h5 class="center goldenrod">{{ upTime[0] }} Days<br>{{ upTime[1] }} Hours<br>{{ upTime[2] }} Minutes</h5>
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@
                         <h2 class="center goldenrod">Memory Usage</h2>
                         <table>
                             <thead>
-                                <tr>
+                                <tr class="goldenrod">
                                     <th data-field="total">Size</th>
                                     <th data-field="used">Used</th>
                                     <th data-field="free">Avail</th>
@@ -112,7 +112,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="goldenrod">
                                     <td>{{ memoryUsageInfo[1] }}MB</td>
                                     <td>{{ memoryUsageInfo[2] }}MB</td>
                                     <td>{{ memoryUsageInfo[3] }}MB</td>
@@ -129,7 +129,7 @@
                         <h2 class="center goldenrod">Tasks</h2>
                         <table>
                             <thead>
-                                <tr>
+                                <tr class="goldenrod">
                                     <th data-field="total">Total</th>
                                     <th data-field="used">Running</th>
                                     <th data-field="sleep">Sleeping</th>
@@ -138,7 +138,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="goldenrod">
                                     <td>{{ processInfo[1] }}</td>
                                     <td>{{ processInfo[3] }}</td>
                                     <td>{{ processInfo[5] }}</td>
