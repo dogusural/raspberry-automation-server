@@ -8,6 +8,16 @@
    background-color: black;
 }
 
+.name-tag{
+   color: goldenrod;
+   font-size: 20px;
+   position:absolute;
+   top:0;
+   right:0;
+   padding: 10px;
+
+}
+
 nav ul {
    list-style-type: none;
    margin: 0;
