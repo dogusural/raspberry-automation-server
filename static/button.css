@@ -1,18 +1,10 @@
-/* body {
-	margin: 0;
-   height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   background-color: black;
-} */
+
 body {
-  margin: 0;
-  height: 100vh;
-  display: grid;
+  /* margin: 0;
+  height: 100vh; */
 	background: rgb(1, 1, 22);
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .home-return {
@@ -22,6 +14,11 @@ body {
   top:0;
   left:0;
   padding: 10px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: goldenrod;
 }
 
 .buttonred {
