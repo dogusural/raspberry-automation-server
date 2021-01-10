@@ -16,7 +16,7 @@ body {
   padding: 10px;
 }
 
-a:link, a:visited, a:hover, a:active {
+a#home-return:link, a#home-return:visited, a#home-return:hover, a#home-return:active {
   text-decoration: none;
   color: goldenrod;
 }
