@@ -1,19 +1,63 @@
 
 body {
-  /* margin: 0;
-  height: 100vh; */
 	background: rgb(1, 1, 22);
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
+
+div:not(.home-return) a{
+  box-sizing: border-box;
+  display:inline-block;
+  height:50px ;
+  vertical-align: middle;
+  line-height: 50px;
+
+}
+
+div{
+  display: block;
+
+}
+
+div.inbox1{
+  display:inline-block;
+  width: 200px;
+  
+}
+
+div.inbox2{
+  display:inline-block;
+  width: 600px;
+  
+}
+
+div.sbox .abutton{
+  display: inline-block;
+  font-size: 16px;
+  background-color: goldenrod;
+  
+}
+div.sbox {
+
+  margin-bottom: 15px;
+}
+
+div:not(.home-return) a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0%;
+  border: 1px solid black;
+}
+
+
 .home-return {
-  color: #daa520 !;
-  font-size: 20px;
-  position:absolute;
-  top:0;
-  left:0;
-  padding: 10px;
+	color: #daa520 !;
+	font-size: 20px;
+	top:0;
+	left:0;
+	padding: 0px 0px 50px 0px;
 }
 
 a#home-return:link, a#home-return:visited, a#home-return:hover, a#home-return:active {
@@ -21,63 +65,3 @@ a#home-return:link, a#home-return:visited, a#home-return:hover, a#home-return:ac
   color: goldenrod;
 }
 
-.buttonred {
-  font: bold 12px Arial;
-  text-decoration: none;
-  background-color: #ec0c0c;
-  color: #000000;
-  padding: 2px 6px 2px 6px;
-  border-radius: 12px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-  transition-duration: 0.4s;
-
-}
-
-.buttonred:hover {
-  background-color: #fffdfd; /* Green */
-  color: red;
-}
-
-
-.buttonyellow {
-  font: bold 12px Arial;
-  text-decoration: none;
-  background-color: #e2f104;
-  color: #000000;
-  padding: 2px 6px 2px 6px;
-  border-radius: 12px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-  transition-duration: 0.4s;
-
-}
-
-.buttonyellow:hover {
-  background-color: #fffdfd; /* Green */
-  color: yellow;
-}
-
-.buttongreen {
-  font: bold 12px Arial;
-  text-decoration: none;
-  background-color: #0de918;
-  color: #000000;
-  padding: 2px 6px 2px 6px;
-  border-radius: 12px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-  transition-duration: 0.4s;
-
-}
-
-.buttongreen:hover {
-  background-color: #fffdfd; /* Green */
-  color: green;
-}

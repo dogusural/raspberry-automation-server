@@ -14,31 +14,55 @@
    </head>
    <body>
 		<div class="home-return">
-			<a href="/" id="home-return" >Home</a> 
+			<a href="/" id="home-return" class ="home-button" >Home</a> 
 		</div>
 
-		<div class="buttons">
-			<h2> <u>Status</u> </h2>
-			<h3> RED LED  =  {{ red  }}</h3>
-			<h3> YELLOW LED  =  {{ yellow  }}</h3>
-			<h3> GREEN LED  =  {{ green  }}</h3>
-			<br>
-			<h2> <u>Commands</u> </h2>
-			<h3> 
-				RED LED  = 
-				<a href="/red/on" class="buttonred">ON</a>  
-				<a href="/red/off"class="buttonred">OFF</a>
-			</h3>
-			<h3> 
-				YELLOW LED  = 
-				<a href="/yellow/on" class="buttonyellow">ON</a>  
-				<a href="/yellow/off"class="buttonyellow">OFF</a>
-			</h3>
-			<h3> 
-				GREEN LED  = 
-				<a href="/green/on" class="buttongreen">ON</a>  
-				<a href="/green/off"class="buttongreen">OFF</a>
-			</h3>
+
+		<div class ="sbox">
+			<div class = "inbox1">
+				<span class="rled oled">{{ red  }}</span>
+			</div>
+			<div class = "inbox2">
+				<div class ="abutton">
+					<a href="/red/on" class="buttonred">ON</a>  
+				</div>
+				<div class ="abutton">		
+					<a href="/red/off"class="buttonred">OFF</a>
+				</div>
+			</div>
+
+		</div>
+		
+		<div class ="sbox">
+			<div class = "inbox1">
+				<span class="yled oled">{{ yellow  }}</span>
+			</div>
+			<div class = "inbox2">
+				<div class ="abutton">
+					<a href="/yellow/on" class="buttonyellow">ON</a>  
+				</div>
+				<div class ="abutton">
+					<a href="/yellow/off"class="buttonyellow">OFF</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class ="sbox">
+			<div class = "inbox1">
+				<span class="gled oled">{{ green  }}</span>
+			</div>
+			<div class = "inbox2">
+				<div class ="abutton">
+					<a href="/green/on" class="buttongreen">ON</a>  
+				</div>				
+				<div class ="abutton">
+					<a href="/green/off"class="buttongreen">OFF</a>
+				</div>
+			</div>
+				
+			</div>
+
 		</div>
 		
    </body>
