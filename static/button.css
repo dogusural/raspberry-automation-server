@@ -65,3 +65,24 @@ a#home-return:link, a#home-return:visited, a#home-return:hover, a#home-return:ac
   color: goldenrod;
 }
 
+span.ON {
+  color:red;
+
+}
+
+span.OFF {
+  color:grey;
+}
+
+.leds{
+  display:none;
+
+}
+
+span.ON~img.rled-img{
+  display:inline-block;
+}
+
+span.OFF~img.uled-img{
+  display:inline-block;
+}
