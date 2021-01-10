@@ -65,14 +65,14 @@ a#home-return:link, a#home-return:visited, a#home-return:hover, a#home-return:ac
   color: goldenrod;
 }
 
-span.ON {
+/* span.ON {
   color:red;
 
 }
 
 span.OFF {
   color:grey;
-}
+} */
 
 .leds{
   display:none;
@@ -86,3 +86,12 @@ span.ON~img.rled-img{
 span.OFF~img.uled-img{
   display:inline-block;
 }
+
+span.ON~img.yled-img{
+  display:inline-block;
+}
+
+span.ON~img.gled-img{
+  display:inline-block;
+}
+
